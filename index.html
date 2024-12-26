@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaadi Clothing</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .navbar .links a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 15px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: color 0.2s ease !important;
+        }
+
+        .navbar .links a:hover {
+            color: #ff5722;
+        }
+
+        /* Slider */
+        .slider {
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            max-height: 400px;
+        }
+
+        .slides {
+            display: flex;
+            animation: slide 12s infinite;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: 0.5s;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Cards */
+        .card-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 250px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 5px;
+            font-size: 18px;
+            color: #ff5722;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 5px 0 15px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+        /* Navbar responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar .links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar .links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .navbar .links a:hover {
+        color: #ff5722;
+    }
+}
+
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0px; /* Increased padding for more height */
+            background: linear-gradient(120deg, #ff5722, #f9a825);
+            color: white;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+            /* Increased height */
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer-content p, .footer-credits p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer-content a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #000000;
+        }
+
+        .footer-credits {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .footer-credits a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-credits a:hover {
+            color: #000;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content p, .footer-credits p {
+                font-size: 12px;
+            }
+
+            .footer {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo"><img src="./imgs/logo.png" alt=""></div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img style="object-fit: cover;height: auto;width: 100%;" src="./imgs/slider-image-1.jpg" alt="Slider Image 1">
+            </div>
+            <div class="slide">
+                <img style="object-fit: cover;height: auto;width: 100%;" src="./imgs/slider-image-2.jpg" alt="Slider Image 2">
+            </div>
+            <div class="slide">
+                <img style="object-fit: cover;height: auto;width: 100%;" src="./imgs/slider-image-3.jpg" alt="Slider Image 3">
+            </div>
+            <div class="slide">
+                <img style="object-fit: cover;height: auto;width: 100%;" src="./imgs/slider-image-1.jpg" alt="Slider Image 4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-container" style="margin-top: 70px;">
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card 1.jpg" alt="Kurta 1">
+            <h3>Embroidered Kurta</h3>
+            <p>PKR 3,500</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card2.jpg" alt="Kurta 2">
+            <h3>Printed Kurta</h3>
+            <p>PKR 2,800</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card3.jpg" alt="Kurta 3">
+            <h3>Casual Kurta</h3>
+            <p>PKR 2,000</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card4.jpg" alt="Kurta 4">
+            <h3>Festive Kurta</h3>
+            <p>PKR 4,000</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card2.jpg" alt="Kurta 4">
+            <h3>Festive Kurta</h3>
+            <p>PKR 4,000</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card4.jpg" alt="Kurta 4">
+            <h3>Festive Kurta</h3>
+            <p>PKR 4,000</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card3.jpg" alt="Kurta 4">
+            <h3>Festive Kurta</h3>
+            <p>PKR 4,000</p>
+        </div>
+        <div class="card">
+            <img style="width: 80%; object-fit: contain; height: 50vh;" src="./imgs/card4.jpg" alt="Kurta 4">
+            <h3>Festive Kurta</h3>
+            <p>PKR 4,000</p>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Khaadi Clothing. All rights reserved.</p>
+            <p>Explore the finest collection of embroidered, casual, and festive wear.</p>
+            <p>
+                Follow us:
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="#" target="_blank">Instagram</a> |
+                <a href="#" target="_blank">Twitter</a>
+            </p>
+        </div>
+        <div class="footer-credits">
+            <p>Website by Khaadi Team | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
